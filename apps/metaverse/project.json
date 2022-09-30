@@ -1,0 +1,83 @@
+{
+  "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+  "sourceRoot": "apps/metaverse/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "dependsOn": [],
+      "options": {
+        "project": "apps/metaverse/package.json",
+        "outputPath": "dist/apps/metaverse",
+        "compiler": "swc",
+        "entryFile": "apps/metaverse/src/index.ts",
+        "tsConfig": "apps/metaverse/tsconfig.lib.json",
+        "rollupConfig": ["apps/metaverse/rollup.config.cjs"],
+        "format": ["esm"],
+        "assets": [
+          {
+            "glob": "apps/metaverse/*.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "apps/metaverse/src/index.html",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "apps/metaverse/src/metaverse.html",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "apps/metaverse/src/vr.html",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "apps/metaverse/src/debug.html",
+            "input": ".",
+            "output": "."
+          },
+          "apps/metaverse/src/assets"
+        ]
+      },
+      "configurations": {
+        "serve": {
+          "watch": true,
+          "assets": []
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm-run-all --parallel \"serve --cors ./dist/apps/metaverse\" \"nx run metaverse:build:serve\""
+      },
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/metaverse/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/metaverse"],
+      "options": {
+        "jestConfig": "apps/metaverse/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["metaverse", "application"]
+}

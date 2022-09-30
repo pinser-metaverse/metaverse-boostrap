@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: metaverse
+    env: static
+    buildCommand: yarn; yarn nx build metaverse
+    staticPublishPath: ./dist/apps/metaverse
