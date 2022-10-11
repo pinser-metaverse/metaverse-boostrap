@@ -1,19 +1,13 @@
 # Metaverse Bootstrap
+
+[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/pinser-metaverse/metaverse-boostrap/blob/master/apps/metaverse/src/lib/metaverse.space.ts)
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
-This project uses [Pinser metaverse](https://www.pinser.world).
+![Pinser logo](https://www.pinser.agency/wp-content/uploads/2022/06/logo-long-e1656513928420.png)
 
-<p style="text-align: center;"><img src="https://www.pinser.agency/wp-content/uploads/2022/06/logo-long-e1656513928420.png"></p>
+This project uses [Pinser metaverse](https://www.pinser-metaverse.com).
 
-🔎 **Smart, Fast and Extensible Build System**
-
-## Generate an application
-
-Run `nx workspace-generator pins my-pins pins-domain` to generate an Pin's.
-
-You can create multiple applications and libraries in the same workspace.
-
-## Generate a library
+## Generate a pin's
 
 Run `nx workspace-generator pins my-pins pins-domain` to generate a Pin's.
 
@@ -39,16 +33,4 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 
 ## Further help
 
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+Visit the [Documentation](https://www.pinser-metaverse.com) to learn more.

@@ -54,7 +54,7 @@
     "serve": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "npm-run-all --parallel \"serve --cors ./dist/apps/metaverse\" \"nx run metaverse:build:serve\""
+        "command": "npm-run-all --parallel \"server --cors ./dist/apps/metaverse\" \"nx run metaverse:build:serve\""
       },
       "dependsOn": [
         {

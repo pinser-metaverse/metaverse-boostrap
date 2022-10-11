@@ -10,7 +10,13 @@ function getRollupOptions(options) {
     '@pinser-metaverse/player',
     '@pinser-metaverse/scene',
     '@pinser-metaverse/exporter',
+    "@pinser-metaverse/info",
     '@pinser-metaverse/observe',
+    '@pinser-metaverse/teleport',
+    '@pinser-metaverse/ready-player-me',
+    '@pinser-metaverse/design-system',
+    '@pinser-metaverse/screen-shared',
+    '@pinser-metaverse/router',
   ];
 
   const value = {

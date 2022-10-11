@@ -1,0 +1,5 @@
+{
+  "template": "node",
+  "startScript": "yarn start",
+  "port": 3000
+}
