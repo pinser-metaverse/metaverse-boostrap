@@ -29,7 +29,7 @@
     "@pinser-metaverse/core": "latest",
     "@pinser-metaverse/design-system": "latest",
     "@pinser-metaverse/exporter": "latest",
-    "@pinser-metaverse/gltf": "latest",
+    "@pinser-metaverse/mesh": "latest",
     "@pinser-metaverse/info": "latest",
     "@pinser-metaverse/observe": "latest",
     "@pinser-metaverse/player": "latest",

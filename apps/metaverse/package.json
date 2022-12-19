@@ -5,6 +5,6 @@
   "peerDependencies": {
     "@pinser-metaverse/core": "latest",
     "@pinser-metaverse/scene": "latest",
-    "@pinser-metaverse/gltf": "latest"
+    "@pinser-metaverse/mesh": "latest"
   }
 }
