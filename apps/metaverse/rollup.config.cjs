@@ -6,11 +6,11 @@ function getRollupOptions(options) {
   const extraGlobals = {};
   const externals = [
     '@pinser-metaverse/core',
-    '@pinser-metaverse/gltf',
+    '@pinser-metaverse/mesh',
     '@pinser-metaverse/player',
     '@pinser-metaverse/scene',
     '@pinser-metaverse/exporter',
-    "@pinser-metaverse/info",
+    '@pinser-metaverse/info',
     '@pinser-metaverse/observe',
     '@pinser-metaverse/teleport',
     '@pinser-metaverse/ready-player-me',
@@ -31,8 +31,13 @@ function getRollupOptions(options) {
     plugins: [
       ...options.plugins,
       alias({
-        entries: Object.getOwnPropertyNames(tsconfig.compilerOptions.paths).map((property => ({ find: property, replacement: tsconfig.compilerOptions.paths[property][0] })))
-      })
+        entries: Object.getOwnPropertyNames(tsconfig.compilerOptions.paths).map(
+          (property) => ({
+            find: property,
+            replacement: tsconfig.compilerOptions.paths[property][0],
+          })
+        ),
+      }),
     ],
     output: {
       ...options.output,

@@ -5,7 +5,7 @@ import {
   MetaElement,
 } from '@pinser-metaverse/core';
 import '@pinser-metaverse/design-system';
-import '@pinser-metaverse/gltf';
+import '@pinser-metaverse/mesh';
 import { PlayerProvider } from '@pinser-metaverse/player';
 import '@pinser-metaverse/teleport';
 
@@ -27,14 +27,21 @@ export class MetaverseBootstrapSpaceElement extends MetaElement {
       <a-sky hide-on-ar color="#80d4ff"></a-sky>
 
       <!-- IDLE man -->
-      <meta-gltf
-        url="./assets/man.glb"
-        animations="./assets/animations.glb"
-        playing="clip: IDLE;"
+      <a-gltf-model
+        src="./assets/man.glb"
         position="-0.854 0 -1.754"
-        rotation="0 34.26 0"></meta-gltf>
-      ></meta-gltf>
-      
+        rotation="0 34.26 0"
+      >
+        <meta-mesh-animation-mixer
+          object="Scene"
+          url="./assets/animations.glb"
+          mixer="clip: IDLE;"
+          selectable
+          animation__mouseenter="property: scale; to: 1.03 1.03 1.03; startEvents: mouseenter; dur: 500; easing: easeOutElastic;"
+          animation__mouseleave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 500; easing: easeOutElastic;"
+        ></meta-mesh-animation-mixer>
+      </a-gltf-model>
+
       <!-- welcome panel -->
       <meta-dialog width="2" height="1" rotation="0 0 0" position="-1 1.2 -2">
         <a-image
