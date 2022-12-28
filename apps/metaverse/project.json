@@ -27,17 +27,7 @@
             "output": "."
           },
           {
-            "glob": "apps/metaverse/src/metaverse.html",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "apps/metaverse/src/vr.html",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "apps/metaverse/src/debug.html",
+            "glob": "apps/metaverse/src/settings.html",
             "input": ".",
             "output": "."
           },
