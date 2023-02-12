@@ -5,6 +5,7 @@ const alias = require('@rollup/plugin-alias');
 function getRollupOptions(options) {
   const extraGlobals = {};
   const externals = [
+    '@pinser-metaverse/camrender',
     '@pinser-metaverse/core',
     '@pinser-metaverse/mesh',
     '@pinser-metaverse/player',
@@ -17,6 +18,8 @@ function getRollupOptions(options) {
     '@pinser-metaverse/design-system',
     '@pinser-metaverse/screen-shared',
     '@pinser-metaverse/router',
+    '@pinser-metaverse/spline',
+    '@pinser-metaverse/mesh',
   ];
 
   const value = {
